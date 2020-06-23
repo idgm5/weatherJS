@@ -1,0 +1,29 @@
+{
+  "name": "weatherjs",
+  "version": "1.0.0",
+  "description": "A weatherJS application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idgm5/weatherJS.git"
+  },
+  "keywords": [
+    "weather",
+    "application"
+  ],
+  "author": "Isaac Gonzalez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idgm5/weatherJS/issues"
+  },
+  "homepage": "https://github.com/idgm5/weatherJS#readme",
+  "devDependencies": {
+    "css-loader": "^3.6.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
