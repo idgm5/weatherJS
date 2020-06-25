@@ -2,24 +2,21 @@ import './style.css';
 import Form from './form';
 import Weather from './weather';
 import RequestWeather from './checkWeather';
-let currentCity = JSON.parse(localStorage.getItem('currentCity'));
-if (currentCity === null) {
-  currentCity = [];
-}
 
 const checkCity = (city) => {
-  const lastestCheck = new Weather(city, 0);
   RequestWeather.checkWeather(city).then((response) => {
-    lastestCheck.temperature = response.main.temp;
+    const lastestCheck = new Weather(city, response.main.temp);
+    localStorage.setItem('currentCity', JSON.stringify(lastestCheck));
   });
 };
 
-let newcity = JSON.parse(localStorage.getItem('city'));
+let currentCity = JSON.parse(localStorage.getItem('currentCity'));
+let inputCity = JSON.parse(localStorage.getItem('inputCity'));
 
-if (newcity === null) {
-  newcity = '';
+if (inputCity === null) {
+  inputCity = '';
 } else {
-  checkCity(newcity);
+  checkCity(inputCity);
 }
 
 Form.render();
@@ -29,8 +26,18 @@ const submit = document.createElement('button');
 submit.setAttribute('type', 'submit');
 submit.classList.add('form-button');
 submit.onclick = () => {
-  localStorage.setItem('city', JSON.stringify(form[0].value));
+  localStorage.setItem('inputCity', JSON.stringify(form[0].value));
 };
 
 submit.innerHTML = 'Check Weather';
 form.appendChild(submit);
+
+if (currentCity) {
+  const cityDiv = document.createElement('div');
+  const cityP = document.createElement('P');
+
+  cityP.innerHTML = `The current temperature in ${currentCity.city} is ${currentCity.temperature} °C`;
+
+  cityDiv.appendChild(cityP);
+  form.appendChild(cityDiv);
+}

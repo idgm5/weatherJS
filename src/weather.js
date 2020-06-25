@@ -1,5 +1,5 @@
 export default class Weather {
-  constructor(city, temperature) {
+  constructor(city, temperature = 0) {
     this.city = city;
     this.temperature = temperature;
   }
