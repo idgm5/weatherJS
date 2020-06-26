@@ -21,9 +21,10 @@ const Form = (() => {
   const cityLabel = document.createElement('label');
   cityLabel.setAttribute('for', 'city');
   cityLabel.classList.add('label');
-  cityLabel.innerHTML = 'City';
+
   const cityInput = document.createElement('input');
   cityInput.setAttribute('type', 'text');
+  cityInput.setAttribute('placeholder', 'Write the name of a city');
   cityInput.classList.add('city-input');
   cityInput.required = true;
 

@@ -2,12 +2,26 @@
 body {
   display: flex;
   justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  background: transparent;
+  border: transparent;
+  margin-left: 25px;
+}
+
+button > i {
+  font-size: 2rem;
 }
 
 #weather-form {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  background: white;
+  padding: 5% 14%;
+  margin: 1rem 0;
+  border-radius: 40px;
 }
 
 .form-element-title {
@@ -22,6 +36,17 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.city-input {
+  background: transparent;
+  border: transparent;
+  width: 75%;
+}
+
+.city-name {
+  margin-top: 45% !important;
+  font-size: 55px !important;
 }
 
 .form-background > div {

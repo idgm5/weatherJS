@@ -29,7 +29,7 @@ submit.onclick = () => {
   localStorage.setItem('inputCity', JSON.stringify(form[0].value));
 };
 
-submit.innerHTML = 'Check Weather';
+submit.innerHTML = '<i class="fas fa-arrow-alt-circle-right"></i>';
 form.appendChild(submit);
 
 if (currentCity) {
@@ -38,15 +38,15 @@ if (currentCity) {
   const tempDiv = document.createElement('div');
   const tempP = document.createElement('P');
   const mainDiv = document.getElementById('form-background-div');
-  tempP.innerHTML = `${Math.floor(currentCity.temperature)} °C`;
+  tempP.innerHTML = `${Math.floor(currentCity.temperature)}°`;
 
   const cityDiv = document.createElement('div');
   const cityP = document.createElement('P');
-
-  cityP.innerHTML = `The current temperature in ${currentCity.city} is ${currentCity.temperature} °C`;
+  cityDiv.classList.add('city-name');
+  
+  cityP.innerHTML = `${currentCity.city}`;
 
   tempDiv.appendChild(tempP);
-  mainDiv.append(tempDiv, image);
   cityDiv.appendChild(cityP);
-  form.appendChild(cityDiv);
+  mainDiv.append(tempDiv, image, cityDiv);
 }
