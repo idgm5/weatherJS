@@ -33,11 +33,20 @@ submit.innerHTML = 'Check Weather';
 form.appendChild(submit);
 
 if (currentCity) {
+  const image = document.createElement('img');
+  image.setAttribute('src', './assets/cloud.svg')
+  const tempDiv = document.createElement('div');
+  const tempP = document.createElement('P');
+  const mainDiv = document.getElementById('form-background-div');
+  tempP.innerHTML = `${Math.floor(currentCity.temperature)} °C`;
+
   const cityDiv = document.createElement('div');
   const cityP = document.createElement('P');
 
   cityP.innerHTML = `The current temperature in ${currentCity.city} is ${currentCity.temperature} °C`;
 
+  tempDiv.appendChild(tempP);
+  mainDiv.append(tempDiv, image);
   cityDiv.appendChild(cityP);
   form.appendChild(cityDiv);
 }

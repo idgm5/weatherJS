@@ -8,9 +8,12 @@ const Form = (() => {
   const titleDiv = document.createElement('div');
   titleDiv.classList.add('form-element-title');
   const title = document.createElement('p');
-  title.innerHTML = '<i class="fas fa-cloud"></i> What to wear?';
+  title.innerHTML = '<i class="fas fa-cloud"></i> WeatherApp';
   titleDiv.appendChild(title);
 
+  const backgroundDiv = document.createElement('div');
+  backgroundDiv.classList.add('form-background');
+  backgroundDiv.setAttribute('id', 'form-background-div');
 
   const cityDiv = document.createElement('div');
   cityDiv.classList.add('form-element-container');
@@ -25,8 +28,8 @@ const Form = (() => {
   cityInput.required = true;
 
   cityDiv.append(cityLabel, cityInput);
-  form.append(titleDiv, cityDiv);
-  container.appendChild(form);
+  form.appendChild(cityDiv);
+  container.append(titleDiv, backgroundDiv, form);
   };
   return { render };
 })();

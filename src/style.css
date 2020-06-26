@@ -8,5 +8,38 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1300px;
+}
+
+.form-element-title {
+  padding: 2% 35%;
+  margin: 10px 0 0 0;
+  border-radius: 40px;
+  background: white;
+}
+
+
+.form-background {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-background > div {
+  height: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 75px;
+  margin-left: 20px;
+  top: 0;
+  position: absolute;
+  margin-top: 3rem;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  background: blue;
+  border-radius: 50px;
 }
