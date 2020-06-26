@@ -10,5 +10,4 @@ export default class Weather {
     localStorage.setItem('currentCity', JSON.stringify(lastcheck));
     return this;
   }
-
 }
