@@ -31,6 +31,11 @@ button > i {
   background: white;
 }
 
+.feels-like {
+  font-size: 20px;
+  margin: -70px 0;
+}
+
 
 .form-background {
   display: flex;
@@ -45,8 +50,16 @@ button > i {
 }
 
 .city-name {
-  margin-top: 45% !important;
+  margin-top: 40rem !important;
   font-size: 55px !important;
+}
+
+.city-name > p:first-child {
+  font-size: 20px;
+}
+
+.city-name > p {
+  margin: 0;
 }
 
 .form-background > div {
