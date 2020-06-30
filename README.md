@@ -35,7 +35,7 @@ Open `index.html` in your web browser
 
 ## Demo
 
-[Hosted on Githack ](https://rawcdn.githack.com/idgm5/weatherJS/4a4e06243ff880475c1a01516c1ffb5f8e093d10/dist/index.html)
+[Hosted on Githack ](https://rawcdn.githack.com/idgm5/weatherJS/cf7a8ddcfee1164c7fdb4b57f0f0091ff64b6768/dist/index.html?)
 
 ## Screenshot
 
