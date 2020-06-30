@@ -1,0 +1,96 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  background: transparent;
+  border: transparent;
+  margin-left: 25px;
+}
+
+button > i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#weather-form {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5% 14%;
+  margin: 1rem 0;
+  border-radius: 40px;
+}
+
+.form-element-title {
+  padding: 2% 35%;
+  margin: 10px 0 0 0;
+  border-radius: 40px;
+  background: white;
+}
+
+.feels-like {
+  font-size: 20px;
+  margin: -70px 0;
+}
+
+.form-background {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-background > img {
+  height: 715px;
+}
+
+.city-input {
+  background: transparent;
+  border: transparent;
+  width: 75%;
+}
+
+.city-name {
+  margin-top: 40rem !important;
+  font-size: 55px !important;
+}
+
+.city-name > p {
+  margin: 0;
+}
+
+.city-name > p:first-child {
+  font-size: 20px;
+}
+
+.ctof {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  margin-left: 6rem;
+  font-size: 20px;
+  border: 2px solid white;
+  padding: 0 2rem;
+}
+
+.form-background > div {
+  height: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 75px;
+  margin-left: 20px;
+  top: 0;
+  position: absolute;
+  margin-top: 3rem;
+}
+
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  background: blue;
+  border-radius: 50px;
+}
