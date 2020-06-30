@@ -21,7 +21,7 @@ const currentCity = JSON.parse(localStorage.getItem('currentCity'));
 let inputCity = JSON.parse(localStorage.getItem('inputCity'));
 
 if (inputCity === null) {
-  inputCity = "";
+  inputCity = '';
 } else {
   checkCity(inputCity);
 }
@@ -68,19 +68,20 @@ if (currentCity) {
   cityP.innerHTML = currentCity.city;
 
   const switchDegrees = document.createElement('button');
-  switchDegrees.classList.add('ctof');
-  switchDegrees.innerHTML = "Convert to °F";
-  switchDegrees.onclick = () => convert(currentCity.temperature, currentCity.feelslike);
 
   const convert = (celsius, feelslike) => {
-    var f = celsius * 9 / 5 + 32;
-    var feelslikeF = feelslike * 9 / 5 + 32;
+    const f = celsius * (9 / 5) + 32;
+    const feelslikeF = feelslike * (9 / 5) + 32;
 
-    switchDegrees.innerHTML = "Convert to °C";
+    switchDegrees.innerHTML = 'Convert to °C';
     tempP.innerHTML = `${Math.floor(f)}°`;
     feelsP.innerHTML = `Feels like ${Math.floor(feelslikeF)}°`;
     switchDegrees.onclick = () => reload();
   };
+
+  switchDegrees.classList.add('ctof');
+  switchDegrees.innerHTML = 'Convert to °F';
+  switchDegrees.onclick = () => convert(currentCity.temperature, currentCity.feelslike);
 
   tempDiv.append(tempP, feelsP);
   cityDiv.append(conditionP, cityP, switchDegrees);
